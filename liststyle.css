@@ -1,0 +1,73 @@
+html, body.ng-scope {
+  font-size: 17px;
+}
+ul{
+  padding: 15px;
+  list-style-type: none;
+}
+li {
+  background-color: #ffebcd;
+  border-radius: 15px;
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.element {
+  padding-left: 35px;
+}
+.delete {
+  background-color: #ffebcd;
+  border: 1px solid #ffebcd;
+  color: red;
+  padding: 0px 15px;
+  float: right;
+}
+button.delete {
+  box-shadow: 0px 0px #fff;
+}
+.done {
+  background-color: #7FFFD4;
+  border: 2px solid #7FFFD4;
+}
+input, button {
+  border-radius: 30px;
+  background-color: #fff;
+  border: 3px solid #F5F5F5;
+  padding: 10px;
+  box-shadow: 5px 5px #EDE7E3;
+  outline: none;
+}
+input#reset:hover, input#submit:hover {
+  background-color: #F5F5F5;
+  border: 3px solid #F5F5F5;
+}
+input[type=text].ng-touched {
+  background-color: #fff;
+}
+input:focus {
+  border: 3px solid #F5F5F5;
+}
+li:hover {
+  cursor: pointer;
+}
+li.done.ng-binding.ng-scope:hover {
+  cursor: default;
+}
+
+@media screen and (min-width: 500px){
+  li {
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  li:hover {
+    overflow: visible;
+  }
+}

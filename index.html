@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>TO DO LIST</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="To Do List" />
+	<meta name="author" content="Sara De Grandis" />
+	<link rel="stylesheet" type="text/css" href="liststyle.css">
+	<link rel="icon" type="image/x-icon" href="" />
+
+	<!--Boostrap CSS CDN--> 
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<!--JQUERY CDN-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<!--Bootstrap Jaavscript CDN-->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="ctrl" >
+
+	<div class="container-fluid text-center" id="add"><br>
+		<form ng-submit="addList($item)">
+			<label>To Do List</label><br><br>
+		<input type="text" maxlength="20" name="item" ng-model="item" placeholder="....">
+		<input type="submit" id="submit" value="Add item">
+		<input type="reset" id="reset" ng-click="reset()" value="Reset"><br><br>
+		</form>
+	</div>
+
+	<div class="row">
+		<div class="container-fluid" ng-model="mylist">
+			<ul>
+				<li ng-repeat="item in mylist" ng-click="checked($item)" class="element"> {{ item }}
+					<button ng-click="delete($item)" class="delete">X</button> </li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container-fluid text-center" ng-model="mylist"><label>Done</label>
+			<ul>
+				<li ng-repeat="x in done" class="done"> {{ x }}</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Angular-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  	<script src="listaapp.js"></script>
+  	</body>
+</html>
